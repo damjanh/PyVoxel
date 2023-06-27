@@ -7,7 +7,7 @@ class BaseMesh:
         self.program = None
         self.vbo = None
         self.vbo_format = None
-        self.attrs = tuple[str, ...] = None
+        self.attrs: tuple[str, ...] = None
         self.vao = None
 
     def get_vertex_data(self) -> np.array: ...
@@ -17,7 +17,7 @@ class BaseMesh:
         vbo = self.ctx.buffer(vertex_data)
         vao = self.ctx.vertex_array(
             self.program, [(vbo, self.vbo_format, *self.attrs)],
-            skipErrors=True
+            skip_errors=True
         )
         return vao
 
