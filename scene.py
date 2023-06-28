@@ -1,5 +1,4 @@
-from settings import *
-from chunk import Chunk
+from world_objects.chunk import Chunk
 
 
 class Scene:
